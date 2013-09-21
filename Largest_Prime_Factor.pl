@@ -51,17 +51,6 @@ sub isPrime
     my ($currentNumber) = @_;
     print "Check Prime: " . $currentNumber . "\n";
     my $isPrime = 1;
-    #for( my $int = 2 ; $int < $currentNumber; $int++)
-    #{
-
-      #  #print $currentNumber%$int . "\n";
-      #  if ( $currentNumber%$int == 0 ) 
-      #  {
-      #      $isPrime = 0;
-      #      #print "Not Prime: " . $currentNumber . "\n";
-      #      #print "Divisible by: " . $int . "\n";
-      #  }
-    #}
     foreach my $factor (@factors) 
     {
 
