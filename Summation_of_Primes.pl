@@ -24,7 +24,7 @@ my $sum;
 while ( $int < $nth_prime)
 {
     $int++;
-    print $int . "\n";
+    print "$int\n";
     isPrime($int);
 }
 
@@ -32,24 +32,24 @@ foreach my $prime_numbers (@prime_numbers)
 {
     $sum += $prime_numbers;
 }
-print "The sum of n primes numbers is: " . $sum . "\n";
+print "The sum of n primes numbers is: $sum\n";
 print "The prime factors are: @prime_numbers\n";
 
 
 sub isPrime
 {
     my ($currentNumber) = @_;
-    #print "Check Prime: " . $currentNumber . "\n";
+    #print "Check Prime: $currentNumber\n";
     my $isPrime = 1;
     foreach my $prime_numbers (@prime_numbers) 
     {
 
-        #print $currentNumber%$factor . "\n";
+        #print "$currentNumber%$factor\n";
         if ( $currentNumber%$prime_numbers == 0 ) 
         {
             $isPrime = 0;
-            #print "Not Prime: " . $currentNumber . "\n";
-            #print "Divisible by: " . $prime_numbers . "\n";
+            #print "Not Prime: $currentNumber\n";
+            #print "Divisible by: $prime_numbers\n";
             return $isPrime;
         }
     }

@@ -42,7 +42,7 @@ sub fibonacci
         fibonacci($currentNumber,$previousNumber, $sum);
     }
     
-    print "The sum is: " . $sum . "\n";
+    print "The sum is: $sum\n";
     exit(0);
 }
 

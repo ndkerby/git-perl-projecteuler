@@ -6,7 +6,7 @@
 #     By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, 
 #     we can see that the 6th prime is 13.
 #
-#     What is the 10 001st prime number?
+#     What is the 10001st prime number?
 #
 # ANSWER: 
 #    The largest prime factor is: 6857
@@ -28,24 +28,23 @@ while ( scalar (@prime_numbers) != $nth_prime)
     isPrime($int);
 }
 
-print "The nth prime number is: " . $prime_numbers[$nth_prime-1] . "\n";
+print "The nth prime number is: $prime_numbers[$nth_prime-1]\n";
 #print "The prime factors are: @prime_numbers\n";
 
 
 sub isPrime
 {
     my ($currentNumber) = @_;
-    #print "Check Prime: " . $currentNumber . "\n";
+    #print "Check Prime: $currentNumber\n";
     my $isPrime = 1;
     foreach my $prime_numbers (@prime_numbers) 
     {
-
-        #print $currentNumber%$factor . "\n";
+        #print "$currentNumber%$factor\n";
         if ( $currentNumber%$prime_numbers == 0 ) 
         {
             $isPrime = 0;
-            #print "Not Prime: " . $currentNumber . "\n";
-            #print "Divisible by: " . $prime_numbers . "\n";
+            #print "Not Prime: $currentNumber\n";
+            #print "Divisible by: $prime_numbers\n";
             return $isPrime;
         }
     }
