@@ -14,14 +14,15 @@ sub isPrime{
     my ($currentNumber) = @_;
     #print "Check Prime: " . $currentNumber . "\n";
     my $isPrime = 1;
-    foreach my $prime_numbers (@prime_numbers) {
-
+    foreach my $prime_number (@prime_numbers) {
+        if($prime_number <= $currentNumber){
         #print $currentNumber%$prime_numbers . "\n";
-        if ( $currentNumber%$prime_numbers == 0 ){
-            $isPrime = 0;
-            #print "Not Prime: " . $currentNumber . "\n";
-            #print "Divisible by: " . $prime_numbers . "\n";
-            return $isPrime;
+            if ( $currentNumber%$prime_number == 0 ){
+                $isPrime = 0;
+                #print "Not Prime: " . $currentNumber . "\n";
+                #print "Divisible by: " . $prime_numbers . "\n";
+                return $isPrime;
+            }
         }
     }
     
