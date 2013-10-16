@@ -96,6 +96,21 @@ sub number_of_divisors{
     return $count; 
 }
 
+sub factors{
+    my ($number) = @_;
+    my @factors = ();
+    for( my $int = 2; $int < $number; $int++){
+        if ( $number%$int == 0 ){
+            my $mod = ($number/$int);
+            if ((!grep /^$int$/, @factors)){ 
+                push(@factors, $int);
+                push(@factors, $mod) if ($int != $mod);
+            }
+        }
+    }
+    return @factors; 
+}
+
 sub next_fibonacci_number{
     my ($currentFibonacci, $previousFibonacci) = @_;
     my $nextFibonacci = $currentFibonacci + $previousFibonacci;
